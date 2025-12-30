@@ -1,0 +1,2718 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.1003.1601                               -->
+<workbook original-version='18.1' source-build='2025.2.4 (20252.25.1003.1601)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Top N' datatype='integer' name='[Parameter 1]' param-domain-type='any' role='measure' type='quantitative' value='10'>
+        <calculation class='tableau' formula='10' />
+      </column>
+    </datasource>
+    <datasource caption='visualizing_global_co2_data' inline='true' name='federated.0iabh861gpikpz17gzwn900m5jl1' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='visualizing_global_co2_data' name='textscan.0kdgb471uvssj615hf08o16qb7rh'>
+            <connection class='textscan' directory='C:/Users/hp/Desktop/Maven Analytic/Data/CO2+Emissions' filename='visualizing_global_co2_data.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0kdgb471uvssj615hf08o16qb7rh' name='visualizing_global_co2_data.csv' table='[visualizing_global_co2_data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+            <column datatype='string' name='country' ordinal='0' />
+            <column datatype='integer' name='year' ordinal='1' />
+            <column datatype='string' name='iso_code' ordinal='2' />
+            <column datatype='integer' name='population' ordinal='3' />
+            <column datatype='real' name='gdp' ordinal='4' />
+            <column datatype='real' name='cement_co2' ordinal='5' />
+            <column datatype='real' name='cement_co2_per_capita' ordinal='6' />
+            <column datatype='real' name='co2' ordinal='7' />
+            <column datatype='real' name='co2_growth_abs' ordinal='8' />
+            <column datatype='real' name='co2_growth_prct' ordinal='9' />
+            <column datatype='real' name='co2_including_luc' ordinal='10' />
+            <column datatype='real' name='co2_including_luc_growth_abs' ordinal='11' />
+            <column datatype='real' name='co2_including_luc_growth_prct' ordinal='12' />
+            <column datatype='real' name='co2_including_luc_per_capita' ordinal='13' />
+            <column datatype='real' name='co2_including_luc_per_gdp' ordinal='14' />
+            <column datatype='real' name='co2_including_luc_per_unit_energy' ordinal='15' />
+            <column datatype='real' name='co2_per_capita' ordinal='16' />
+            <column datatype='real' name='co2_per_gdp' ordinal='17' />
+            <column datatype='real' name='co2_per_unit_energy' ordinal='18' />
+            <column datatype='real' name='coal_co2' ordinal='19' />
+            <column datatype='real' name='coal_co2_per_capita' ordinal='20' />
+            <column datatype='real' name='consumption_co2' ordinal='21' />
+            <column datatype='real' name='consumption_co2_per_capita' ordinal='22' />
+            <column datatype='real' name='consumption_co2_per_gdp' ordinal='23' />
+            <column datatype='real' name='cumulative_cement_co2' ordinal='24' />
+            <column datatype='real' name='cumulative_co2' ordinal='25' />
+            <column datatype='real' name='cumulative_co2_including_luc' ordinal='26' />
+            <column datatype='real' name='cumulative_coal_co2' ordinal='27' />
+            <column datatype='real' name='cumulative_flaring_co2' ordinal='28' />
+            <column datatype='real' name='cumulative_gas_co2' ordinal='29' />
+            <column datatype='real' name='cumulative_luc_co2' ordinal='30' />
+            <column datatype='real' name='cumulative_oil_co2' ordinal='31' />
+            <column datatype='string' name='cumulative_other_co2' ordinal='32' />
+            <column datatype='real' name='energy_per_capita' ordinal='33' />
+            <column datatype='real' name='energy_per_gdp' ordinal='34' />
+            <column datatype='real' name='flaring_co2' ordinal='35' />
+            <column datatype='real' name='flaring_co2_per_capita' ordinal='36' />
+            <column datatype='real' name='gas_co2' ordinal='37' />
+            <column datatype='real' name='gas_co2_per_capita' ordinal='38' />
+            <column datatype='real' name='ghg_excluding_lucf_per_capita' ordinal='39' />
+            <column datatype='real' name='ghg_per_capita' ordinal='40' />
+            <column datatype='real' name='land_use_change_co2' ordinal='41' />
+            <column datatype='real' name='land_use_change_co2_per_capita' ordinal='42' />
+            <column datatype='real' name='methane' ordinal='43' />
+            <column datatype='real' name='methane_per_capita' ordinal='44' />
+            <column datatype='real' name='nitrous_oxide' ordinal='45' />
+            <column datatype='real' name='nitrous_oxide_per_capita' ordinal='46' />
+            <column datatype='real' name='oil_co2' ordinal='47' />
+            <column datatype='real' name='oil_co2_per_capita' ordinal='48' />
+            <column datatype='string' name='other_co2_per_capita' ordinal='49' />
+            <column datatype='string' name='other_industry_co2' ordinal='50' />
+            <column datatype='real' name='primary_energy_consumption' ordinal='51' />
+            <column datatype='real' name='share_global_cement_co2' ordinal='52' />
+            <column datatype='real' name='share_global_co2' ordinal='53' />
+            <column datatype='real' name='share_global_co2_including_luc' ordinal='54' />
+            <column datatype='real' name='share_global_coal_co2' ordinal='55' />
+            <column datatype='real' name='share_global_cumulative_cement_co2' ordinal='56' />
+            <column datatype='real' name='share_global_cumulative_co2' ordinal='57' />
+            <column datatype='real' name='share_global_cumulative_co2_including_luc' ordinal='58' />
+            <column datatype='real' name='share_global_cumulative_coal_co2' ordinal='59' />
+            <column datatype='real' name='share_global_cumulative_flaring_co2' ordinal='60' />
+            <column datatype='real' name='share_global_cumulative_gas_co2' ordinal='61' />
+            <column datatype='real' name='share_global_cumulative_luc_co2' ordinal='62' />
+            <column datatype='real' name='share_global_cumulative_oil_co2' ordinal='63' />
+            <column datatype='string' name='share_global_cumulative_other_co2' ordinal='64' />
+            <column datatype='real' name='share_global_flaring_co2' ordinal='65' />
+            <column datatype='real' name='share_global_gas_co2' ordinal='66' />
+            <column datatype='real' name='share_global_luc_co2' ordinal='67' />
+            <column datatype='real' name='share_global_oil_co2' ordinal='68' />
+            <column datatype='string' name='share_global_other_co2' ordinal='69' />
+            <column datatype='real' name='share_of_temperature_change_from_ghg' ordinal='70' />
+            <column datatype='real' name='temperature_change_from_ch4' ordinal='71' />
+            <column datatype='real' name='temperature_change_from_co2' ordinal='72' />
+            <column datatype='real' name='temperature_change_from_ghg' ordinal='73' />
+            <column datatype='real' name='temperature_change_from_n2o' ordinal='74' />
+            <column datatype='real' name='total_ghg' ordinal='75' />
+            <column datatype='real' name='total_ghg_excluding_lucf' ordinal='76' />
+            <column datatype='real' name='trade_co2' ordinal='77' />
+            <column datatype='real' name='trade_co2_share' ordinal='78' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>iso_code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[iso_code]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>iso_code</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>population</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[population]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>population</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gdp</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gdp]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>gdp</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cement_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cement_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>cement_co2</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cement_co2_per_capita</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cement_co2_per_capita]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>cement_co2_per_capita</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>co2</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>co2_growth_abs</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[co2_growth_abs]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>co2_growth_abs</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>co2_growth_prct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[co2_growth_prct]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>co2_growth_prct</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>co2_including_luc</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[co2_including_luc]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>co2_including_luc</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>co2_including_luc_growth_abs</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[co2_including_luc_growth_abs]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>co2_including_luc_growth_abs</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>co2_including_luc_growth_prct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[co2_including_luc_growth_prct]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>co2_including_luc_growth_prct</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>co2_including_luc_per_capita</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[co2_including_luc_per_capita]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>co2_including_luc_per_capita</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>co2_including_luc_per_gdp</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[co2_including_luc_per_gdp]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>co2_including_luc_per_gdp</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>co2_including_luc_per_unit_energy</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[co2_including_luc_per_unit_energy]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>co2_including_luc_per_unit_energy</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>co2_per_capita</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[co2_per_capita]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>co2_per_capita</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>co2_per_gdp</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[co2_per_gdp]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>co2_per_gdp</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>co2_per_unit_energy</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[co2_per_unit_energy]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>co2_per_unit_energy</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>coal_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[coal_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>coal_co2</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>coal_co2_per_capita</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[coal_co2_per_capita]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>coal_co2_per_capita</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>consumption_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[consumption_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>consumption_co2</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>consumption_co2_per_capita</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[consumption_co2_per_capita]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>consumption_co2_per_capita</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>consumption_co2_per_gdp</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[consumption_co2_per_gdp]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>consumption_co2_per_gdp</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cumulative_cement_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cumulative_cement_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>cumulative_cement_co2</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cumulative_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cumulative_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>cumulative_co2</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cumulative_co2_including_luc</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cumulative_co2_including_luc]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>cumulative_co2_including_luc</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cumulative_coal_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cumulative_coal_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>cumulative_coal_co2</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cumulative_flaring_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cumulative_flaring_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>cumulative_flaring_co2</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cumulative_gas_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cumulative_gas_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>cumulative_gas_co2</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cumulative_luc_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cumulative_luc_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>cumulative_luc_co2</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cumulative_oil_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cumulative_oil_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>cumulative_oil_co2</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cumulative_other_co2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cumulative_other_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>cumulative_other_co2</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>energy_per_capita</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[energy_per_capita]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>energy_per_capita</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>energy_per_gdp</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[energy_per_gdp]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>energy_per_gdp</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>flaring_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[flaring_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>flaring_co2</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>flaring_co2_per_capita</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[flaring_co2_per_capita]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>flaring_co2_per_capita</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gas_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gas_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>gas_co2</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gas_co2_per_capita</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gas_co2_per_capita]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>gas_co2_per_capita</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ghg_excluding_lucf_per_capita</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ghg_excluding_lucf_per_capita]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>ghg_excluding_lucf_per_capita</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ghg_per_capita</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ghg_per_capita]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>ghg_per_capita</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>land_use_change_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[land_use_change_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>land_use_change_co2</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>land_use_change_co2_per_capita</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[land_use_change_co2_per_capita]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>land_use_change_co2_per_capita</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>methane</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[methane]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>methane</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>methane_per_capita</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[methane_per_capita]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>methane_per_capita</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nitrous_oxide</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[nitrous_oxide]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>nitrous_oxide</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nitrous_oxide_per_capita</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[nitrous_oxide_per_capita]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>nitrous_oxide_per_capita</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>oil_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[oil_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>oil_co2</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>oil_co2_per_capita</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[oil_co2_per_capita]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>oil_co2_per_capita</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>other_co2_per_capita</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[other_co2_per_capita]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>other_co2_per_capita</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>other_industry_co2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[other_industry_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>other_industry_co2</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>primary_energy_consumption</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[primary_energy_consumption]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>primary_energy_consumption</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>share_global_cement_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[share_global_cement_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>share_global_cement_co2</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>share_global_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[share_global_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>share_global_co2</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>share_global_co2_including_luc</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[share_global_co2_including_luc]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>share_global_co2_including_luc</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>share_global_coal_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[share_global_coal_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>share_global_coal_co2</remote-alias>
+            <ordinal>55</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>share_global_cumulative_cement_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[share_global_cumulative_cement_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>share_global_cumulative_cement_co2</remote-alias>
+            <ordinal>56</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>share_global_cumulative_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[share_global_cumulative_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>share_global_cumulative_co2</remote-alias>
+            <ordinal>57</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>share_global_cumulative_co2_including_luc</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[share_global_cumulative_co2_including_luc]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>share_global_cumulative_co2_including_luc</remote-alias>
+            <ordinal>58</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>share_global_cumulative_coal_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[share_global_cumulative_coal_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>share_global_cumulative_coal_co2</remote-alias>
+            <ordinal>59</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>share_global_cumulative_flaring_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[share_global_cumulative_flaring_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>share_global_cumulative_flaring_co2</remote-alias>
+            <ordinal>60</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>share_global_cumulative_gas_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[share_global_cumulative_gas_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>share_global_cumulative_gas_co2</remote-alias>
+            <ordinal>61</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>share_global_cumulative_luc_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[share_global_cumulative_luc_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>share_global_cumulative_luc_co2</remote-alias>
+            <ordinal>62</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>share_global_cumulative_oil_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[share_global_cumulative_oil_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>share_global_cumulative_oil_co2</remote-alias>
+            <ordinal>63</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>share_global_cumulative_other_co2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[share_global_cumulative_other_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>share_global_cumulative_other_co2</remote-alias>
+            <ordinal>64</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>share_global_flaring_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[share_global_flaring_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>share_global_flaring_co2</remote-alias>
+            <ordinal>65</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>share_global_gas_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[share_global_gas_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>share_global_gas_co2</remote-alias>
+            <ordinal>66</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>share_global_luc_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[share_global_luc_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>share_global_luc_co2</remote-alias>
+            <ordinal>67</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>share_global_oil_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[share_global_oil_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>share_global_oil_co2</remote-alias>
+            <ordinal>68</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>share_global_other_co2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[share_global_other_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>share_global_other_co2</remote-alias>
+            <ordinal>69</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>share_of_temperature_change_from_ghg</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[share_of_temperature_change_from_ghg]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>share_of_temperature_change_from_ghg</remote-alias>
+            <ordinal>70</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>temperature_change_from_ch4</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[temperature_change_from_ch4]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>temperature_change_from_ch4</remote-alias>
+            <ordinal>71</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>temperature_change_from_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[temperature_change_from_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>temperature_change_from_co2</remote-alias>
+            <ordinal>72</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>temperature_change_from_ghg</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[temperature_change_from_ghg]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>temperature_change_from_ghg</remote-alias>
+            <ordinal>73</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>temperature_change_from_n2o</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[temperature_change_from_n2o]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>temperature_change_from_n2o</remote-alias>
+            <ordinal>74</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_ghg</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_ghg]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>total_ghg</remote-alias>
+            <ordinal>75</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_ghg_excluding_lucf</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_ghg_excluding_lucf]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>total_ghg_excluding_lucf</remote-alias>
+            <ordinal>76</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>trade_co2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[trade_co2]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>trade_co2</remote-alias>
+            <ordinal>77</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>trade_co2_share</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[trade_co2_share]</local-name>
+            <parent-name>[visualizing_global_co2_data.csv]</parent-name>
+            <remote-alias>trade_co2_share</remote-alias>
+            <ordinal>78</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='visualizing_global_co2_data.csv' datatype='table' name='[__tableau_internal_object_id__].[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]' role='measure' type='quantitative' />
+      <column caption='Cement Co2' datatype='real' name='[cement_co2]' role='measure' type='quantitative' />
+      <column caption='Cement Co2 Per Capita' datatype='real' name='[cement_co2_per_capita]' role='measure' type='quantitative' />
+      <column caption='Co2' datatype='real' name='[co2]' role='measure' type='quantitative' />
+      <column caption='Co2 Growth Abs' datatype='real' name='[co2_growth_abs]' role='measure' type='quantitative' />
+      <column caption='Co2 Growth Prct' datatype='real' name='[co2_growth_prct]' role='measure' type='quantitative' />
+      <column caption='Co2 Including Luc' datatype='real' name='[co2_including_luc]' role='measure' type='quantitative' />
+      <column caption='Co2 Including Luc Growth Abs' datatype='real' name='[co2_including_luc_growth_abs]' role='measure' type='quantitative' />
+      <column caption='Co2 Including Luc Growth Prct' datatype='real' name='[co2_including_luc_growth_prct]' role='measure' type='quantitative' />
+      <column caption='Co2 Including Luc Per Capita' datatype='real' name='[co2_including_luc_per_capita]' role='measure' type='quantitative' />
+      <column caption='Co2 Including Luc Per Gdp' datatype='real' name='[co2_including_luc_per_gdp]' role='measure' type='quantitative' />
+      <column caption='Co2 Including Luc Per Unit Energy' datatype='real' name='[co2_including_luc_per_unit_energy]' role='measure' type='quantitative' />
+      <column caption='Co2 Per Capita' datatype='real' name='[co2_per_capita]' role='measure' type='quantitative' />
+      <column caption='Co2 Per Gdp' datatype='real' name='[co2_per_gdp]' role='measure' type='quantitative' />
+      <column caption='Co2 Per Unit Energy' datatype='real' name='[co2_per_unit_energy]' role='measure' type='quantitative' />
+      <column caption='Coal Co2' datatype='real' name='[coal_co2]' role='measure' type='quantitative' />
+      <column caption='Coal Co2 Per Capita' datatype='real' name='[coal_co2_per_capita]' role='measure' type='quantitative' />
+      <column caption='Consumption Co2' datatype='real' name='[consumption_co2]' role='measure' type='quantitative' />
+      <column caption='Consumption Co2 Per Capita' datatype='real' name='[consumption_co2_per_capita]' role='measure' type='quantitative' />
+      <column caption='Consumption Co2 Per Gdp' datatype='real' name='[consumption_co2_per_gdp]' role='measure' type='quantitative' />
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Cumulative Cement Co2' datatype='real' name='[cumulative_cement_co2]' role='measure' type='quantitative' />
+      <column caption='Cumulative Co2' datatype='real' name='[cumulative_co2]' role='measure' type='quantitative' />
+      <column caption='Cumulative Co2 Including Luc' datatype='real' name='[cumulative_co2_including_luc]' role='measure' type='quantitative' />
+      <column caption='Cumulative Coal Co2' datatype='real' name='[cumulative_coal_co2]' role='measure' type='quantitative' />
+      <column caption='Cumulative Flaring Co2' datatype='real' name='[cumulative_flaring_co2]' role='measure' type='quantitative' />
+      <column caption='Cumulative Gas Co2' datatype='real' name='[cumulative_gas_co2]' role='measure' type='quantitative' />
+      <column caption='Cumulative Luc Co2' datatype='real' name='[cumulative_luc_co2]' role='measure' type='quantitative' />
+      <column caption='Cumulative Oil Co2' datatype='real' name='[cumulative_oil_co2]' role='measure' type='quantitative' />
+      <column caption='Cumulative Other Co2' datatype='integer' datatype-customized='true' name='[cumulative_other_co2]' role='measure' type='quantitative' />
+      <column caption='Energy Per Capita' datatype='real' name='[energy_per_capita]' role='measure' type='quantitative' />
+      <column caption='Energy Per Gdp' datatype='real' name='[energy_per_gdp]' role='measure' type='quantitative' />
+      <column caption='Flaring Co2' datatype='real' name='[flaring_co2]' role='measure' type='quantitative' />
+      <column caption='Flaring Co2 Per Capita' datatype='real' name='[flaring_co2_per_capita]' role='measure' type='quantitative' />
+      <column caption='Gas Co2' datatype='real' name='[gas_co2]' role='measure' type='quantitative' />
+      <column caption='Gas Co2 Per Capita' datatype='real' name='[gas_co2_per_capita]' role='measure' type='quantitative' />
+      <column caption='Gdp' datatype='real' name='[gdp]' role='measure' type='quantitative' />
+      <column caption='Ghg Excluding Lucf Per Capita' datatype='real' name='[ghg_excluding_lucf_per_capita]' role='measure' type='quantitative' />
+      <column caption='Ghg Per Capita' datatype='real' name='[ghg_per_capita]' role='measure' type='quantitative' />
+      <column caption='Iso Code' datatype='string' name='[iso_code]' role='dimension' type='nominal' />
+      <column caption='Land Use Change Co2' datatype='real' name='[land_use_change_co2]' role='measure' type='quantitative' />
+      <column caption='Land Use Change Co2 Per Capita' datatype='real' name='[land_use_change_co2_per_capita]' role='measure' type='quantitative' />
+      <column caption='Methane' datatype='real' name='[methane]' role='measure' type='quantitative' />
+      <column caption='Methane Per Capita' datatype='real' name='[methane_per_capita]' role='measure' type='quantitative' />
+      <column caption='Nitrous Oxide' datatype='real' name='[nitrous_oxide]' role='measure' type='quantitative' />
+      <column caption='Nitrous Oxide Per Capita' datatype='real' name='[nitrous_oxide_per_capita]' role='measure' type='quantitative' />
+      <column caption='Oil Co2' datatype='real' name='[oil_co2]' role='measure' type='quantitative' />
+      <column caption='Oil Co2 Per Capita' datatype='real' name='[oil_co2_per_capita]' role='measure' type='quantitative' />
+      <column aggregation='CountD' caption='Other Co2 Per Capita' datatype='integer' datatype-customized='true' name='[other_co2_per_capita]' role='measure' type='quantitative' />
+      <column caption='Other Industry Co2' datatype='integer' datatype-customized='true' name='[other_industry_co2]' role='measure' type='quantitative' />
+      <column caption='Population' datatype='integer' name='[population]' role='measure' type='quantitative' />
+      <column caption='Primary Energy Consumption' datatype='real' name='[primary_energy_consumption]' role='measure' type='quantitative' />
+      <column caption='Share Global Cement Co2' datatype='real' name='[share_global_cement_co2]' role='measure' type='quantitative' />
+      <column caption='Share Global Co2' datatype='real' name='[share_global_co2]' role='measure' type='quantitative' />
+      <column caption='Share Global Co2 Including Luc' datatype='real' name='[share_global_co2_including_luc]' role='measure' type='quantitative' />
+      <column caption='Share Global Coal Co2' datatype='real' name='[share_global_coal_co2]' role='measure' type='quantitative' />
+      <column caption='Share Global Cumulative Cement Co2' datatype='real' name='[share_global_cumulative_cement_co2]' role='measure' type='quantitative' />
+      <column caption='Share Global Cumulative Co2' datatype='real' name='[share_global_cumulative_co2]' role='measure' type='quantitative' />
+      <column caption='Share Global Cumulative Co2 Including Luc' datatype='real' name='[share_global_cumulative_co2_including_luc]' role='measure' type='quantitative' />
+      <column caption='Share Global Cumulative Coal Co2' datatype='real' name='[share_global_cumulative_coal_co2]' role='measure' type='quantitative' />
+      <column caption='Share Global Cumulative Flaring Co2' datatype='real' name='[share_global_cumulative_flaring_co2]' role='measure' type='quantitative' />
+      <column caption='Share Global Cumulative Gas Co2' datatype='real' name='[share_global_cumulative_gas_co2]' role='measure' type='quantitative' />
+      <column caption='Share Global Cumulative Luc Co2' datatype='real' name='[share_global_cumulative_luc_co2]' role='measure' type='quantitative' />
+      <column caption='Share Global Cumulative Oil Co2' datatype='real' name='[share_global_cumulative_oil_co2]' role='measure' type='quantitative' />
+      <column aggregation='CountD' caption='Share Global Cumulative Other Co2' datatype='string' default-role='measure' default-type='quantitative' name='[share_global_cumulative_other_co2]' role='dimension' type='nominal' />
+      <column caption='Share Global Flaring Co2' datatype='real' name='[share_global_flaring_co2]' role='measure' type='quantitative' />
+      <column caption='Share Global Gas Co2' datatype='real' name='[share_global_gas_co2]' role='measure' type='quantitative' />
+      <column caption='Share Global Luc Co2' datatype='real' name='[share_global_luc_co2]' role='measure' type='quantitative' />
+      <column caption='Share Global Oil Co2' datatype='real' name='[share_global_oil_co2]' role='measure' type='quantitative' />
+      <column caption='Share Global Other Co2' datatype='integer' datatype-customized='true' name='[share_global_other_co2]' role='measure' type='quantitative' />
+      <column caption='Share Of Temperature Change From Ghg' datatype='real' name='[share_of_temperature_change_from_ghg]' role='measure' type='quantitative' />
+      <column caption='Temperature Change From Ch4' datatype='real' name='[temperature_change_from_ch4]' role='measure' type='quantitative' />
+      <column caption='Temperature Change From Co2' datatype='real' name='[temperature_change_from_co2]' role='measure' type='quantitative' />
+      <column caption='Temperature Change From Ghg' datatype='real' name='[temperature_change_from_ghg]' role='measure' type='quantitative' />
+      <column caption='Temperature Change From N2O' datatype='real' name='[temperature_change_from_n2o]' role='measure' type='quantitative' />
+      <column caption='Total Ghg' datatype='real' name='[total_ghg]' role='measure' type='quantitative' />
+      <column caption='Total Ghg Excluding Lucf' datatype='real' name='[total_ghg_excluding_lucf]' role='measure' type='quantitative' />
+      <column caption='Trade Co2' datatype='real' name='[trade_co2]' role='measure' type='quantitative' />
+      <column caption='Trade Co2 Share' datatype='real' name='[trade_co2_share]' role='measure' type='quantitative' />
+      <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/hp/AppData/Local/Temp/TableauTemp/#TableauTemp_0mof8un0c9rzss1eqlr3i118fapl.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='12/28/2025 12:57:34 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[country]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>country</remote-alias>
+              <ordinal>0</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>443</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>year</remote-alias>
+              <ordinal>1</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>423</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>iso_code</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[iso_code]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>iso_code</remote-alias>
+              <ordinal>2</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>375</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>population</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[population]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>population</remote-alias>
+              <ordinal>3</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>42718</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gdp</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[gdp]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gdp</remote-alias>
+              <ordinal>4</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>21467</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cement_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[cement_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cement_co2</remote-alias>
+              <ordinal>5</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2906</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cement_co2_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[cement_co2_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cement_co2_per_capita</remote-alias>
+              <ordinal>6</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>986</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>co2</remote-alias>
+              <ordinal>7</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7165</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>co2_growth_abs</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[co2_growth_abs]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>co2_growth_abs</remote-alias>
+              <ordinal>8</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4368</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>co2_growth_prct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[co2_growth_prct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>co2_growth_prct</remote-alias>
+              <ordinal>9</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>13455</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>co2_including_luc</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[co2_including_luc]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>co2_including_luc</remote-alias>
+              <ordinal>10</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11290</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>co2_including_luc_growth_abs</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[co2_including_luc_growth_abs]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>co2_including_luc_growth_abs</remote-alias>
+              <ordinal>11</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6732</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>co2_including_luc_growth_prct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[co2_including_luc_growth_prct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>co2_including_luc_growth_prct</remote-alias>
+              <ordinal>12</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>15813</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>co2_including_luc_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[co2_including_luc_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>co2_including_luc_per_capita</remote-alias>
+              <ordinal>13</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16117</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>co2_including_luc_per_gdp</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[co2_including_luc_per_gdp]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>co2_including_luc_per_gdp</remote-alias>
+              <ordinal>14</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6021</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>co2_including_luc_per_unit_energy</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[co2_including_luc_per_unit_energy]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>co2_including_luc_per_unit_energy</remote-alias>
+              <ordinal>15</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2268</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>co2_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[co2_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>co2_per_capita</remote-alias>
+              <ordinal>16</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5851</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>co2_per_gdp</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[co2_per_gdp]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>co2_per_gdp</remote-alias>
+              <ordinal>17</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2494</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>co2_per_unit_energy</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[co2_per_unit_energy]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>co2_per_unit_energy</remote-alias>
+              <ordinal>18</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>710</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>coal_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[coal_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>coal_co2</remote-alias>
+              <ordinal>19</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5672</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>coal_co2_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[coal_co2_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>coal_co2_per_capita</remote-alias>
+              <ordinal>20</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3433</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>consumption_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[consumption_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>consumption_co2</remote-alias>
+              <ordinal>21</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6038</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>consumption_co2_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[consumption_co2_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>consumption_co2_per_capita</remote-alias>
+              <ordinal>22</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5462</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>consumption_co2_per_gdp</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[consumption_co2_per_gdp]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>consumption_co2_per_gdp</remote-alias>
+              <ordinal>23</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2050</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cumulative_cement_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[cumulative_cement_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cumulative_cement_co2</remote-alias>
+              <ordinal>24</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8126</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cumulative_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[cumulative_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cumulative_co2</remote-alias>
+              <ordinal>25</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>15200</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cumulative_co2_including_luc</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[cumulative_co2_including_luc]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cumulative_co2_including_luc</remote-alias>
+              <ordinal>26</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>19313</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cumulative_coal_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[cumulative_coal_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cumulative_coal_co2</remote-alias>
+              <ordinal>27</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7808</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cumulative_flaring_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[cumulative_flaring_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cumulative_flaring_co2</remote-alias>
+              <ordinal>28</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4485</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cumulative_gas_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[cumulative_gas_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cumulative_gas_co2</remote-alias>
+              <ordinal>29</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5407</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cumulative_luc_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[cumulative_luc_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cumulative_luc_co2</remote-alias>
+              <ordinal>30</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10287</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cumulative_oil_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[cumulative_oil_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cumulative_oil_co2</remote-alias>
+              <ordinal>31</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12878</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cumulative_other_co2</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[cumulative_other_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cumulative_other_co2</remote-alias>
+              <ordinal>32</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3168</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>energy_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[energy_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>energy_per_capita</remote-alias>
+              <ordinal>33</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>17477</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>energy_per_gdp</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[energy_per_gdp]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>energy_per_gdp</remote-alias>
+              <ordinal>34</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4461</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>flaring_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[flaring_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>flaring_co2</remote-alias>
+              <ordinal>35</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2333</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>flaring_co2_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[flaring_co2_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>flaring_co2_per_capita</remote-alias>
+              <ordinal>36</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>808</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gas_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[gas_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gas_co2</remote-alias>
+              <ordinal>37</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3925</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gas_co2_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[gas_co2_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gas_co2_per_capita</remote-alias>
+              <ordinal>38</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2500</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ghg_excluding_lucf_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[ghg_excluding_lucf_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ghg_excluding_lucf_per_capita</remote-alias>
+              <ordinal>39</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9794</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ghg_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[ghg_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ghg_per_capita</remote-alias>
+              <ordinal>40</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9794</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>land_use_change_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[land_use_change_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>land_use_change_co2</remote-alias>
+              <ordinal>41</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3359</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>land_use_change_co2_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[land_use_change_co2_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>land_use_change_co2_per_capita</remote-alias>
+              <ordinal>42</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11588</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>methane</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[methane]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>methane</remote-alias>
+              <ordinal>43</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3449</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>methane_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[methane_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>methane_per_capita</remote-alias>
+              <ordinal>44</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5045</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>nitrous_oxide</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[nitrous_oxide]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>nitrous_oxide</remote-alias>
+              <ordinal>45</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1881</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>nitrous_oxide_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[nitrous_oxide_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>nitrous_oxide_per_capita</remote-alias>
+              <ordinal>46</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1953</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>oil_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[oil_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>oil_co2</remote-alias>
+              <ordinal>47</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5515</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>oil_co2_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[oil_co2_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>oil_co2_per_capita</remote-alias>
+              <ordinal>48</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4105</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>other_co2_per_capita</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[other_co2_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>other_co2_per_capita</remote-alias>
+              <ordinal>49</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>500</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>other_industry_co2</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[other_industry_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>other_industry_co2</remote-alias>
+              <ordinal>50</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3168</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>primary_energy_consumption</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[primary_energy_consumption]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>primary_energy_consumption</remote-alias>
+              <ordinal>51</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>17477</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>share_global_cement_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[share_global_cement_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>share_global_cement_co2</remote-alias>
+              <ordinal>52</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1997</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>share_global_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[share_global_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>share_global_co2</remote-alias>
+              <ordinal>53</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2052</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>share_global_co2_including_luc</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[share_global_co2_including_luc]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>share_global_co2_including_luc</remote-alias>
+              <ordinal>54</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2719</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>share_global_coal_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[share_global_coal_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>share_global_coal_co2</remote-alias>
+              <ordinal>55</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2323</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>share_global_cumulative_cement_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[share_global_cumulative_cement_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>share_global_cumulative_cement_co2</remote-alias>
+              <ordinal>56</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1896</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>share_global_cumulative_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[share_global_cumulative_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>share_global_cumulative_co2</remote-alias>
+              <ordinal>57</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2229</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>share_global_cumulative_co2_including_luc</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[share_global_cumulative_co2_including_luc]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>share_global_cumulative_co2_including_luc</remote-alias>
+              <ordinal>58</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2459</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>share_global_cumulative_coal_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[share_global_cumulative_coal_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>share_global_cumulative_coal_co2</remote-alias>
+              <ordinal>59</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2098</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>share_global_cumulative_flaring_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[share_global_cumulative_flaring_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>share_global_cumulative_flaring_co2</remote-alias>
+              <ordinal>60</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1234</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>share_global_cumulative_gas_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[share_global_cumulative_gas_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>share_global_cumulative_gas_co2</remote-alias>
+              <ordinal>61</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1593</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>share_global_cumulative_luc_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[share_global_cumulative_luc_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>share_global_cumulative_luc_co2</remote-alias>
+              <ordinal>62</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3073</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>share_global_cumulative_oil_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[share_global_cumulative_oil_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>share_global_cumulative_oil_co2</remote-alias>
+              <ordinal>63</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2007</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>share_global_cumulative_other_co2</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[share_global_cumulative_other_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>share_global_cumulative_other_co2</remote-alias>
+              <ordinal>64</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1285</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>share_global_flaring_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[share_global_flaring_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>share_global_flaring_co2</remote-alias>
+              <ordinal>65</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2487</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>share_global_gas_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[share_global_gas_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>share_global_gas_co2</remote-alias>
+              <ordinal>66</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1835</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>share_global_luc_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[share_global_luc_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>share_global_luc_co2</remote-alias>
+              <ordinal>67</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3295</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>share_global_oil_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[share_global_oil_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>share_global_oil_co2</remote-alias>
+              <ordinal>68</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1920</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>share_global_other_co2</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[share_global_other_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>share_global_other_co2</remote-alias>
+              <ordinal>69</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1285</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>share_of_temperature_change_from_ghg</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[share_of_temperature_change_from_ghg]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>share_of_temperature_change_from_ghg</remote-alias>
+              <ordinal>70</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2500</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>temperature_change_from_ch4</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[temperature_change_from_ch4]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>temperature_change_from_ch4</remote-alias>
+              <ordinal>71</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>166</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>temperature_change_from_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[temperature_change_from_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>temperature_change_from_co2</remote-alias>
+              <ordinal>72</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>288</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>temperature_change_from_ghg</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[temperature_change_from_ghg]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>temperature_change_from_ghg</remote-alias>
+              <ordinal>73</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>422</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>temperature_change_from_n2o</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[temperature_change_from_n2o]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>temperature_change_from_n2o</remote-alias>
+              <ordinal>74</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>62</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_ghg</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_ghg]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_ghg</remote-alias>
+              <ordinal>75</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4264</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_ghg_excluding_lucf</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_ghg_excluding_lucf]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_ghg_excluding_lucf</remote-alias>
+              <ordinal>76</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6477</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>trade_co2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[trade_co2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>trade_co2</remote-alias>
+              <ordinal>77</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3713</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>trade_co2_share</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[trade_co2_share]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>trade_co2_share</remote-alias>
+              <ordinal>78</ordinal>
+              <family>visualizing_global_co2_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3713</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;France&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <filter class='quantitative' column='[co2]' filter-group='2' included-values='in-range'>
+        <min>0.0</min>
+        <max>11472.368</max>
+      </filter>
+      <filter class='categorical' column='[iso_code]' filter-group='2'>
+        <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+          <groupfilter function='level-members' level='[iso_code]' />
+          <groupfilter function='member' level='[iso_code]' member='%null%' />
+        </groupfilter>
+      </filter>
+      <object-graph>
+        <objects>
+          <object caption='visualizing_global_co2_data.csv' id='visualizing_global_co2_data.csv_C86342CA743249648917E4BEF9FD74AA'>
+            <properties context=''>
+              <relation connection='textscan.0kdgb471uvssj615hf08o16qb7rh' name='visualizing_global_co2_data.csv' table='[visualizing_global_co2_data#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='string' name='country' ordinal='0' />
+                  <column datatype='integer' name='year' ordinal='1' />
+                  <column datatype='string' name='iso_code' ordinal='2' />
+                  <column datatype='integer' name='population' ordinal='3' />
+                  <column datatype='real' name='gdp' ordinal='4' />
+                  <column datatype='real' name='cement_co2' ordinal='5' />
+                  <column datatype='real' name='cement_co2_per_capita' ordinal='6' />
+                  <column datatype='real' name='co2' ordinal='7' />
+                  <column datatype='real' name='co2_growth_abs' ordinal='8' />
+                  <column datatype='real' name='co2_growth_prct' ordinal='9' />
+                  <column datatype='real' name='co2_including_luc' ordinal='10' />
+                  <column datatype='real' name='co2_including_luc_growth_abs' ordinal='11' />
+                  <column datatype='real' name='co2_including_luc_growth_prct' ordinal='12' />
+                  <column datatype='real' name='co2_including_luc_per_capita' ordinal='13' />
+                  <column datatype='real' name='co2_including_luc_per_gdp' ordinal='14' />
+                  <column datatype='real' name='co2_including_luc_per_unit_energy' ordinal='15' />
+                  <column datatype='real' name='co2_per_capita' ordinal='16' />
+                  <column datatype='real' name='co2_per_gdp' ordinal='17' />
+                  <column datatype='real' name='co2_per_unit_energy' ordinal='18' />
+                  <column datatype='real' name='coal_co2' ordinal='19' />
+                  <column datatype='real' name='coal_co2_per_capita' ordinal='20' />
+                  <column datatype='real' name='consumption_co2' ordinal='21' />
+                  <column datatype='real' name='consumption_co2_per_capita' ordinal='22' />
+                  <column datatype='real' name='consumption_co2_per_gdp' ordinal='23' />
+                  <column datatype='real' name='cumulative_cement_co2' ordinal='24' />
+                  <column datatype='real' name='cumulative_co2' ordinal='25' />
+                  <column datatype='real' name='cumulative_co2_including_luc' ordinal='26' />
+                  <column datatype='real' name='cumulative_coal_co2' ordinal='27' />
+                  <column datatype='real' name='cumulative_flaring_co2' ordinal='28' />
+                  <column datatype='real' name='cumulative_gas_co2' ordinal='29' />
+                  <column datatype='real' name='cumulative_luc_co2' ordinal='30' />
+                  <column datatype='real' name='cumulative_oil_co2' ordinal='31' />
+                  <column datatype='string' name='cumulative_other_co2' ordinal='32' />
+                  <column datatype='real' name='energy_per_capita' ordinal='33' />
+                  <column datatype='real' name='energy_per_gdp' ordinal='34' />
+                  <column datatype='real' name='flaring_co2' ordinal='35' />
+                  <column datatype='real' name='flaring_co2_per_capita' ordinal='36' />
+                  <column datatype='real' name='gas_co2' ordinal='37' />
+                  <column datatype='real' name='gas_co2_per_capita' ordinal='38' />
+                  <column datatype='real' name='ghg_excluding_lucf_per_capita' ordinal='39' />
+                  <column datatype='real' name='ghg_per_capita' ordinal='40' />
+                  <column datatype='real' name='land_use_change_co2' ordinal='41' />
+                  <column datatype='real' name='land_use_change_co2_per_capita' ordinal='42' />
+                  <column datatype='real' name='methane' ordinal='43' />
+                  <column datatype='real' name='methane_per_capita' ordinal='44' />
+                  <column datatype='real' name='nitrous_oxide' ordinal='45' />
+                  <column datatype='real' name='nitrous_oxide_per_capita' ordinal='46' />
+                  <column datatype='real' name='oil_co2' ordinal='47' />
+                  <column datatype='real' name='oil_co2_per_capita' ordinal='48' />
+                  <column datatype='string' name='other_co2_per_capita' ordinal='49' />
+                  <column datatype='string' name='other_industry_co2' ordinal='50' />
+                  <column datatype='real' name='primary_energy_consumption' ordinal='51' />
+                  <column datatype='real' name='share_global_cement_co2' ordinal='52' />
+                  <column datatype='real' name='share_global_co2' ordinal='53' />
+                  <column datatype='real' name='share_global_co2_including_luc' ordinal='54' />
+                  <column datatype='real' name='share_global_coal_co2' ordinal='55' />
+                  <column datatype='real' name='share_global_cumulative_cement_co2' ordinal='56' />
+                  <column datatype='real' name='share_global_cumulative_co2' ordinal='57' />
+                  <column datatype='real' name='share_global_cumulative_co2_including_luc' ordinal='58' />
+                  <column datatype='real' name='share_global_cumulative_coal_co2' ordinal='59' />
+                  <column datatype='real' name='share_global_cumulative_flaring_co2' ordinal='60' />
+                  <column datatype='real' name='share_global_cumulative_gas_co2' ordinal='61' />
+                  <column datatype='real' name='share_global_cumulative_luc_co2' ordinal='62' />
+                  <column datatype='real' name='share_global_cumulative_oil_co2' ordinal='63' />
+                  <column datatype='string' name='share_global_cumulative_other_co2' ordinal='64' />
+                  <column datatype='real' name='share_global_flaring_co2' ordinal='65' />
+                  <column datatype='real' name='share_global_gas_co2' ordinal='66' />
+                  <column datatype='real' name='share_global_luc_co2' ordinal='67' />
+                  <column datatype='real' name='share_global_oil_co2' ordinal='68' />
+                  <column datatype='string' name='share_global_other_co2' ordinal='69' />
+                  <column datatype='real' name='share_of_temperature_change_from_ghg' ordinal='70' />
+                  <column datatype='real' name='temperature_change_from_ch4' ordinal='71' />
+                  <column datatype='real' name='temperature_change_from_co2' ordinal='72' />
+                  <column datatype='real' name='temperature_change_from_ghg' ordinal='73' />
+                  <column datatype='real' name='temperature_change_from_n2o' ordinal='74' />
+                  <column datatype='real' name='total_ghg' ordinal='75' />
+                  <column datatype='real' name='total_ghg_excluding_lucf' ordinal='76' />
+                  <column datatype='real' name='trade_co2' ordinal='77' />
+                  <column datatype='real' name='trade_co2_share' ordinal='78' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='visualizing_global_co2_data' name='federated.0iabh861gpikpz17gzwn900m5jl1' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0iabh861gpikpz17gzwn900m5jl1'>
+            <column caption='Co2' datatype='real' name='[co2]' role='measure' type='quantitative' />
+            <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[co2]' derivation='Sum' name='[sum:co2:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0iabh861gpikpz17gzwn900m5jl1].[none:country:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0iabh861gpikpz17gzwn900m5jl1].[sum:co2:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0iabh861gpikpz17gzwn900m5jl1].[none:country:nk]</rows>
+        <cols>[federated.0iabh861gpikpz17gzwn900m5jl1].[sum:co2:qk]</cols>
+      </table>
+      <simple-id uuid='{CC35073D-9967-42BC-AEC3-9878DE4D23F6}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='134'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='type_in' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0iabh861gpikpz17gzwn900m5jl1].[none:iso_code:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{D1164BD0-0B6B-4FB0-AAA3-466B3FD1A998}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
